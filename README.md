@@ -12,3 +12,38 @@ Learning traditional machine learning step by step with Python, using small prac
 - `model.coef_` gives the coefficient.
 - `model.intercept_` gives the intercept.
 - I can visualize the real data and the learned regression line.
+
+
+# Train/Test Split
+
+## Goal
+
+Learn how to split data into training and testing sets and evaluate a machine learning model.
+
+## What I Learned
+
+* `X` = features/input
+* `y` = target/output
+* `train_test_split()` separates data into train and test sets.
+* `model.fit()` trains the model using training data.
+* `model.predict()` makes predictions on new data.
+* MAE measures how far predictions are from actual values.
+* `random_state` makes the split reproducible.
+
+## Workflow
+
+```text
+Data
+ ↓
+Train/Test Split
+ ↓
+Train Model
+ ↓
+Predict Test Data
+ ↓
+Evaluate with MAE
+```
+
+## Experiment
+
+I experimented with different `test_size` and `random_state` values to see how they affect the results.
