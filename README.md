@@ -132,3 +132,35 @@ Accuracy
 ## Experiment
 
 Tested different combinations of study hours and attendance to see whether the model predicts **Pass** or **Fail**.
+
+# Logistic Regression — Probabilities
+
+## Goal
+
+Understand how Logistic Regression uses probabilities to make classification decisions.
+
+## What I Learned
+
+* `predict()` returns the predicted class.
+* `predict_proba()` returns the probability for each class.
+* `model.classes_` shows the order of the classes.
+* Logistic Regression uses a decision threshold to choose the final class.
+* Features such as study hours and attendance affect the predicted probability.
+
+## Example
+
+```text
+Student
+   ↓
+Hours + Attendance
+   ↓
+Logistic Regression
+   ↓
+Probabilities
+   ↓
+Pass / Fail
+```
+
+## Experiment
+
+Tested different combinations of study hours and attendance and observed how they changed the probability of passing.
