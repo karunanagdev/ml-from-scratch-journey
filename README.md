@@ -47,3 +47,34 @@ Evaluate with MAE
 ## Experiment
 
 I experimented with different `test_size` and `random_state` values to see how they affect the results.
+
+
+# Model Evaluation
+
+## Goal
+
+Learn how to measure how well a regression model performs.
+
+## Metrics
+
+* **MAE** — Average absolute error.
+* **MSE** — Squares errors, so large errors are penalized more.
+* **RMSE** — Square root of MSE, giving the error in the original units.
+
+## What I Learned
+
+```text
+Model
+ ↓
+Predictions
+ ↓
+Compare with actual values
+ ↓
+MAE / MSE / RMSE
+```
+
+Lower error generally means better predictions.
+
+## Experiment
+
+Compared the model's predictions with intentionally bad predictions and observed how the evaluation metrics changed.
