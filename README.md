@@ -78,3 +78,57 @@ Lower error generally means better predictions.
 ## Experiment
 
 Compared the model's predictions with intentionally bad predictions and observed how the evaluation metrics changed.
+
+
+# Logistic Regression
+
+## Goal
+
+Learn classification using Logistic Regression.
+
+In this example, the model predicts whether a student will **Pass or Fail** based on study hours and attendance.
+
+## What I Learned
+
+* Classification predicts categories instead of numbers.
+* `X` contains the features.
+* `y` contains the target.
+* Logistic Regression can be used for classification.
+* `model.fit()` trains the model.
+* `model.predict()` predicts a class.
+* Accuracy measures how many predictions are correct.
+
+## Features
+
+```text
+hours
+attendance
+```
+
+## Target
+
+```text
+Pass / Fail
+```
+
+## Workflow
+
+```text
+Data
+ ↓
+X + y
+ ↓
+Train/Test Split
+ ↓
+Logistic Regression
+ ↓
+Train
+ ↓
+Predict
+ ↓
+Accuracy
+```
+
+## Experiment
+
+Tested different combinations of study hours and attendance to see whether the model predicts **Pass** or **Fail**.
