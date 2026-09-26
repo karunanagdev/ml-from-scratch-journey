@@ -164,3 +164,42 @@ Pass / Fail
 ## Experiment
 
 Tested different combinations of study hours and attendance and observed how they changed the probability of passing.
+
+
+# K-Nearest Neighbors (KNN)
+
+## Goal
+
+Learn how KNN makes predictions using the most similar data points.
+
+## What I Learned
+
+* KNN looks at nearby data points to make predictions.
+* `n_neighbors` controls how many neighbors are considered.
+* KNN can be used for classification.
+* Smaller `k` focuses more on nearby examples.
+* Larger `k` considers more examples.
+* KNN predictions can be evaluated using accuracy.
+* Feature scaling is important for distance-based algorithms like KNN.
+
+## Workflow
+
+```text
+Data
+ ↓
+Train/Test Split
+ ↓
+KNN
+ ↓
+Find nearest neighbors
+ ↓
+Vote
+ ↓
+Prediction
+ ↓
+Accuracy
+```
+
+## Experiment
+
+Tested different values of `k` such as `1`, `3`, `5`, and `7` and observed how they affected predictions and accuracy.
