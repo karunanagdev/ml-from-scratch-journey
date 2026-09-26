@@ -232,3 +232,32 @@ Compared KNN predictions and accuracy with and without feature scaling using dif
 ## Key Idea
 
 Feature scaling helps prevent features with larger numerical values from dominating distance calculations.
+
+# Decision Tree
+
+## Goal
+
+Learn how Decision Trees make classification predictions using a series of questions or rules.
+
+## What I Learned
+
+* A Decision Tree makes predictions by asking a sequence of questions.
+* Each split divides the data into smaller groups.
+* Leaf nodes contain the final prediction.
+* `max_depth` controls the maximum depth of the tree.
+* `model.get_depth()` shows the actual depth of the trained tree.
+* `model.get_n_leaves()` shows the number of leaf nodes.
+* `plot_tree()` can be used to visualize the tree.
+* Decision Trees can be used for classification.
+
+## Workflow
+
+Data → Train/Test Split → Decision Tree → Train → Predict → Evaluate
+
+## Experiment
+
+Experimented with different `max_depth` values and observed how the tree structure changes.
+
+## Key Idea
+
+`max_depth` is a **maximum limit**, not a requirement. The tree may stop earlier if additional splits are not useful.
