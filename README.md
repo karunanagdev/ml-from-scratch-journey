@@ -294,5 +294,11 @@ The goal was to observe how increasing model complexity can improve training acc
 A model should not simply memorize the training data.
 
 ```text
-Good model → Learns patterns
+Good model → Learns patterns → Works well on new data
+Overfitted model → Memorizes data → Performs worse on new data
 ```
+
+## Workflow
+
+Data → Train/Test Split → Train Models → Compare Train Accuracy → Compare Test Accuracy
+
