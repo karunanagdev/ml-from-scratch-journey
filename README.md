@@ -261,3 +261,38 @@ Experimented with different `max_depth` values and observed how the tree structu
 ## Key Idea
 
 `max_depth` is a **maximum limit**, not a requirement. The tree may stop earlier if additional splits are not useful.
+
+# Overfitting
+
+## Goal
+
+Understand how a machine learning model can perform very well on training data but perform worse on new data.
+
+## What I Learned
+
+* Training accuracy measures performance on data the model has already seen.
+* Test accuracy measures performance on unseen data.
+* A model can memorize training data instead of learning general patterns.
+* This is called overfitting.
+* Decision Trees can overfit when they become too complex.
+* `max_depth` can be used to control tree complexity.
+* Comparing training and test accuracy helps identify overfitting.
+
+## Experiment
+
+Compared a small Decision Tree with a large Decision Tree.
+
+```text
+Small Tree → Limited complexity
+Large Tree → More complexity
+```
+
+The goal was to observe how increasing model complexity can improve training accuracy while potentially reducing test accuracy.
+
+## Key Idea
+
+A model should not simply memorize the training data.
+
+```text
+Good model → Learns patterns
+```

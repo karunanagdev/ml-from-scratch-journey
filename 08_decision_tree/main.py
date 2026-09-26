@@ -16,24 +16,26 @@ import matplotlib.pyplot as plt
 
 data = {
     "hours": [
-        1, 1, 2, 2, 3, 3, 4, 4,
-        5, 5, 6, 6, 7, 7, 8, 8,
-        9, 9
+        1, 2, 2, 3, 3, 4, 4, 5, 5, 6,
+        6, 7, 7, 8, 8, 9, 9, 10,
+        2, 4, 6, 8, 3, 5, 7, 9
     ],
 
     "attendance": [
-        50, 90, 55, 85, 60, 95, 65, 80,
-        70, 90, 55, 75, 60, 85, 70, 95,
-        65, 90
+        50, 55, 80, 60, 90, 65, 85, 70, 95, 55,
+        75, 60, 85, 70, 90, 65, 80, 95,
+        45, 95, 50, 60, 75, 85, 55, 70
     ],
 
     "result": [
-        "Fail", "Pass", "Fail", "Pass", "Fail", "Pass",
-        "Fail", "Pass", "Fail", "Pass", "Fail", "Pass",
-        "Fail", "Pass", "Fail", "Pass", "Fail", "Pass"
+        "Fail", "Fail", "Pass", "Fail", "Pass",
+        "Fail", "Pass", "Fail", "Pass", "Fail",
+        "Pass", "Pass", "Pass", "Pass", "Pass",
+        "Fail", "Pass", "Pass",
+        "Fail", "Pass", "Fail", "Pass",
+        "Fail", "Pass", "Fail", "Pass"
     ]
 }
-
 df = pd.DataFrame(data)
 
 X = df[["hours", "attendance"]]
