@@ -203,3 +203,32 @@ Accuracy
 ## Experiment
 
 Tested different values of `k` such as `1`, `3`, `5`, and `7` and observed how they affected predictions and accuracy.
+
+
+# Feature Scaling
+
+## Goal
+
+Learn why feature scaling is important for distance-based algorithms like KNN.
+
+## What I Learned
+
+* Features can have very different scales.
+* KNN uses distances between data points.
+* A feature with a larger numerical range can have more influence on distance.
+* `StandardScaler` scales features to a similar range.
+* `fit_transform()` is used on training data.
+* `transform()` is used on test data.
+* Feature scaling is especially important for algorithms based on distance.
+
+## Workflow
+
+Data → Train/Test Split → Scale Features → KNN → Predict → Evaluate
+
+## Experiment
+
+Compared KNN predictions and accuracy with and without feature scaling using different values of `k`.
+
+## Key Idea
+
+Feature scaling helps prevent features with larger numerical values from dominating distance calculations.
