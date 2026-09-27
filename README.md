@@ -598,3 +598,67 @@ Best Parameters
       ↓
 Best Model
 ```
+
+# Confusion Matrix
+
+## Goal
+
+Learn how a Confusion Matrix shows correct predictions and mistakes made by a classification model.
+
+## What I Learned
+
+* A Confusion Matrix compares actual results with model predictions.
+* It counts how many predictions were correct and how many were wrong.
+* The rows represent the **actual classes**.
+* The columns represent the **predicted classes**.
+* The diagonal contains correct predictions.
+* The off-diagonal cells contain mistakes.
+* `confusion_matrix()` creates the matrix.
+
+## Example
+
+```text
+                 Predicted
+                 Fail   Pass
+Actual Fail       2      1
+Actual Pass       1      2
+```
+
+This means:
+
+* 2 Fail students were correctly predicted as Fail.
+* 2 Pass students were correctly predicted as Pass.
+* 1 Fail student was incorrectly predicted as Pass.
+* 1 Pass student was incorrectly predicted as Fail.
+
+## Important
+
+The Confusion Matrix is calculated using the **test data**:
+
+```python
+cm = confusion_matrix(y_test, y_pred)
+```
+
+`y_test` contains the actual results of the test students.
+
+`y_pred` contains the model's predictions for those same students.
+
+```text
+Test Students
+      ↓
+Actual Results → y_test
+      ↓
+Model Predictions → y_pred
+      ↓
+Confusion Matrix
+```
+
+## Key Idea
+
+A Confusion Matrix is basically a **mistake counter**.
+
+It tells us not only how many predictions were correct, but also **what type of mistakes the model made**.
+
+This leads to the next lesson:
+
+**Precision, Recall & F1 Score**
