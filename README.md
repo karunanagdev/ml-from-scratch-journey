@@ -499,3 +499,102 @@ Multiple splits → Multiple evaluations → Average performance
 ```
 
 Cross-Validation is especially useful when comparing models and tuning hyperparameters.
+
+
+# Hyperparameter Tuning
+
+## Goal
+
+Learn how to automatically search for good hyperparameter values using `GridSearchCV`.
+
+## What I Learned
+
+* Hyperparameters are settings chosen before training a model.
+* Examples include `n_neighbors`, `max_depth`, `n_estimators`, `C`, and `gamma`.
+* `GridSearchCV` tests multiple hyperparameter combinations.
+* GridSearchCV uses Cross-Validation to evaluate each configuration.
+* `best_params_` shows the best hyperparameter combination found.
+* `best_score_` shows the best average cross-validation score.
+* `best_estimator_` gives the model with the selected parameters.
+* Hyperparameter tuning should be done using training data and cross-validation.
+* The final test set should remain unseen until final evaluation.
+
+## KNN Experiment
+
+For KNN, we searched different values of `n_neighbors`:
+
+```python
+param_grid = {
+    "kneighborsclassifier__n_neighbors": [1, 3, 5]
+}
+```
+
+GridSearchCV compared:
+
+```text
+k = 1
+k = 3
+k = 5
+```
+
+The best parameter found was:
+
+```text
+k = 3
+```
+
+## Workflow
+
+```text
+Training Data
+      ↓
+GridSearchCV
+      ↓
+Try Different Hyperparameters
+      ↓
+Cross-Validation
+      ↓
+Select Best Parameters
+      ↓
+Best Model
+      ↓
+Final Test Set
+      ↓
+Test Accuracy
+```
+
+## Results
+
+The experiment produced approximately:
+
+```text
+Best k: 3
+Best CV Score: 77.8%
+Test Accuracy: 100%
+```
+
+The test set was very small, so the 100% test accuracy should not be interpreted as evidence of real-world 100% performance.
+
+## Important Lesson
+
+The dataset was very small, which caused a warning during cross-validation because there were not enough examples in one class for every fold.
+
+This showed that:
+
+> Cross-validation and hyperparameter tuning work best when there is enough training data.
+
+## Key Idea
+
+```text
+Hyperparameters
+      ↓
+Grid Search
+      ↓
+Cross-Validation
+      ↓
+Compare Results
+      ↓
+Best Parameters
+      ↓
+Best Model
+```
