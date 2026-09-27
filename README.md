@@ -435,3 +435,67 @@ Compared their predictions and accuracy.
 Features → Scale Features → SVM → Find Decision Boundary → Prediction
 
 SVM tries to separate classes while maintaining a useful margin between them.
+
+# Cross-Validation
+
+## Goal
+
+Learn how Cross-Validation evaluates a machine learning model using multiple train/test splits.
+
+## What I Learned
+
+* A single train/test split can sometimes give a lucky or unlucky result.
+* Cross-Validation evaluates the model multiple times.
+* `cv=5` means the data is divided into 5 folds.
+* Each fold is used as the test set once.
+* The model is trained and evaluated multiple times.
+* `cross_val_score()` can calculate the score for each fold.
+* `.mean()` can be used to calculate the average score.
+* Cross-Validation gives a more reliable estimate of model performance.
+
+## Workflow
+
+Dataset → Split into Folds → Train & Test Multiple Times → Get Scores → Average Score
+
+## Example
+
+```python
+scores = cross_val_score(
+    model,
+    X,
+    y,
+    cv=5,
+    scoring="accuracy"
+)
+
+print("Scores:", scores)
+print("Average accuracy:", scores.mean())
+```
+
+## Experiment
+
+Tested different values of `cv`, such as:
+
+```python
+cv=3
+cv=5
+cv=10
+```
+
+and observed how the scores and average accuracy changed.
+
+## Key Idea
+
+Train/Test Split:
+
+```text
+One split → One evaluation
+```
+
+Cross-Validation:
+
+```text
+Multiple splits → Multiple evaluations → Average performance
+```
+
+Cross-Validation is especially useful when comparing models and tuning hyperparameters.
