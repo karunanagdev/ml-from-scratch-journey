@@ -302,3 +302,34 @@ Overfitted model → Memorizes data → Performs worse on new data
 
 Data → Train/Test Split → Train Models → Compare Train Accuracy → Compare Test Accuracy
 
+# Random Forest
+
+## Goal
+
+Learn how Random Forest uses multiple Decision Trees to make predictions.
+
+## What I Learned
+
+* Random Forest is an ensemble machine learning algorithm.
+* It combines multiple Decision Trees.
+* Each tree makes a prediction.
+* The trees' predictions are combined to produce the final prediction.
+* `n_estimators` controls the number of trees in the forest.
+* Random Forest can be used for classification.
+* More trees do not always mean higher accuracy.
+
+## Workflow
+
+Data → Train/Test Split → Random Forest → Multiple Decision Trees → Combine Predictions → Evaluate
+
+## Experiment
+
+Tested different values of `n_estimators`, such as 1, 5, 100, and 500, and compared the predictions and accuracy.
+
+## Key Idea
+
+```text
+Decision Tree → One tree → Prediction
+
+Random Forest → Many trees → Combined prediction
+```
