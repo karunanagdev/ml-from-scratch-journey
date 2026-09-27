@@ -333,3 +333,40 @@ Decision Tree → One tree → Prediction
 
 Random Forest → Many trees → Combined prediction
 ```
+# Naive Bayes
+
+## Goal
+
+Learn how Naive Bayes uses probabilities to make classification predictions.
+
+## What I Learned
+
+* Naive Bayes is a classification algorithm.
+* It uses probabilities to predict the most likely class.
+* `GaussianNB` can be used for numerical features.
+* `model.fit()` trains the model.
+* `model.predict()` predicts the class.
+* `model.predict_proba()` shows the probability for each class.
+* Naive Bayes can be used for problems with multiple features.
+
+## Workflow
+
+Data → Train/Test Split → GaussianNB → Train → Predict → Evaluate
+
+## Experiment
+
+Tested different combinations of study hours and attendance and observed how Naive Bayes predicted Pass or Fail.
+
+## Key Idea
+
+```text
+Features
+   ↓
+Calculate probabilities
+   ↓
+Compare classes
+   ↓
+Choose most likely class
+   ↓
+Prediction
+```
