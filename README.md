@@ -370,3 +370,68 @@ Choose most likely class
    ↓
 Prediction
 ```
+
+# Support Vector Machine (SVM)
+
+## Goal
+
+Learn how Support Vector Machines (SVM) classify data by finding a decision boundary between classes.
+
+## What I Learned
+
+* SVM is a classification algorithm.
+* SVM finds a decision boundary that separates different classes.
+* SVM tries to create a good margin between classes.
+* Support vectors are the data points closest to the decision boundary.
+* Feature scaling is important for SVM.
+* `StandardScaler` can be used to scale features.
+* `SVC()` is used to create an SVM classifier.
+* Different kernels can create different decision boundaries.
+* `C` controls the trade-off between a wider margin and training errors.
+* `gamma` controls how flexible an RBF kernel can be.
+* A Pipeline can combine preprocessing and a model.
+
+## Workflow
+
+Data → Train/Test Split → StandardScaler → SVM → Predict → Evaluate
+
+## Important Parameters
+
+### `kernel`
+
+Controls the type of decision boundary.
+
+* `linear` → straight boundary
+* `rbf` → flexible, nonlinear boundary
+
+### `C`
+
+Controls how strongly the model tries to avoid training errors.
+
+* Small `C` → more tolerant of errors
+* Large `C` → stricter about training errors
+
+### `gamma`
+
+Used mainly with the RBF kernel.
+
+* Small `gamma` → smoother boundary
+* Large `gamma` → more complex/local boundary
+
+## Experiment
+
+Tested different SVM configurations:
+
+```python
+SVC(kernel="linear")
+SVC(kernel="rbf")
+SVC(kernel="rbf", C=0.1)
+```
+
+Compared their predictions and accuracy.
+
+## Key Idea
+
+Features → Scale Features → SVM → Find Decision Boundary → Prediction
+
+SVM tries to separate classes while maintaining a useful margin between them.
